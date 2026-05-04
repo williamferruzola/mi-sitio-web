@@ -1,5 +1,9 @@
 name: Deploy a GitHub Pages
 
+permissions:
+  contents: write
+  pages: write
+
 on:
   push:
     branches: [ main ]
@@ -9,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
     
     - name: Preparar archivos
       run: mkdir -p build && cp -r src/* build/
