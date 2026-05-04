@@ -4,9 +4,6 @@
   "description": "Sitio web con DevOps",
   "scripts": {
     "test": "echo 'Tests'",
-    "start": "npx http-server src -p 8000"
-  },
-  "devDependencies": {
-    "http-server": "^14.1.1"
+    "start": "python3 -m http.server 8000"
   }
 }
